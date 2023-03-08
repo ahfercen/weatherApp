@@ -7,3 +7,17 @@
     flex-direction: column;
     align-items: center;
 }
+.title, .control, .search{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+.title{
+    font-size: 300%;
+}
+.control{
+    justify-content: end;
+}
+.search input{
+    font-size: 150%;
+}
