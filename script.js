@@ -30,13 +30,22 @@ function BuildDisplay(weather, main, visibility, wind,clouds,name){
     const display = 
     `<div class="display">
         <h1>${name}</h1>
-        <div class="info>
+        <div class="main-info">
             <h3>${weather.description}</h3>
+            <p id="degree">${main.temp}</p>
+        </div>
+        <div class="extra-info">
+            <div class="extra-left">
+                <p>${main.feels_like}</p>
+            </div>
+            <div class="extra-right">
+                <p>${main.temp_min}</p>
+                <p>${main.temp_max}</p>
+            </div>
+            
         </div>
     </div>
     `;
-    console.log(weather)
-
     content.innerHTML = (display);
 }
 
