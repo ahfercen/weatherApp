@@ -2,11 +2,6 @@
     display: flex;
     flex-direction: column;
 }
-.header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .title, .control, .search{
     display: flex;
     justify-content: start;
@@ -16,20 +11,17 @@
     font-size: 300%;
 }
 .control{
-    justify-content: end;
-}
-.search input{
-    font-size: 150%;
+    font-size: 200%;
+    border: 1px solid black;
 }
 .content, .display{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 .display{
     border: 1px solid red;
-    width: 50%;
+    width: 70%;
     margin-top: 1%;;
 }
 .display p{
@@ -43,7 +35,7 @@
 }
 .extra-info{
     border: 1px solid green;
-    display: flex;
+    display: flex; 
     flex-direction: row;
     justify-content: center;
     width: 100%;
@@ -56,5 +48,6 @@
     flex: 1;
     border: 1px solid purple;
     display: flex;
+    flex-direction: col;
     align-items: flex-end;
 }
