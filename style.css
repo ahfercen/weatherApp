@@ -32,19 +32,29 @@
     width: 50%;
     margin-top: 1%;;
 }
+.display p{
+    margin: 0px;
+}
 .main-info{
     display: flex;
+    flex-direction: column;
     border: 1px solid blue;
+    align-self: flex-end;
 }
 .extra-info{
     border: 1px solid green;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    width: 100%;
 }
 .extra-left{
+    flex: 1;
     border: 1px solid orange;
 }
 .extra-right{
+    flex: 1;
     border: 1px solid purple;
-
+    display: flex;
+    align-items: flex-end;
 }
