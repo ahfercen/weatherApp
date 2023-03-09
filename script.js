@@ -41,8 +41,8 @@ function BuildDisplay(weather, main, visibility, wind,clouds,name){
                             <p id="temp">${TempDisplay(main.temp)}</p>
                         </div>
                         <div class="desc-wrapper">
-                            <p id="HL">H: ${TempDisplay(main.temp_max)}</p>
-                            <p id="HL">L: ${TempDisplay(main.temp_max)}</p>
+                            <p id="HL">High: ${TempDisplay(main.temp_max)}</p>
+                            <p id="HL">Low: ${TempDisplay(main.temp_max)}</p>
                         </div>
                 </div>
             

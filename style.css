@@ -95,6 +95,9 @@ body{
     font-size: 250%;
     margin-top: 15%;
 }
+#desc{
+    font-size: 150%;
+}
 .desc-wrapper{
     display:flex;
     flex-direction: column;
