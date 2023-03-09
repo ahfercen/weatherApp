@@ -29,26 +29,27 @@ function ParseAnswer(response){
 function BuildDisplay(weather, main, visibility, wind,clouds,name){
     const display = 
     `
-        <div class="day-display">
-            <div class="day-row1">
-                <p id="city">${name}</p>
-                <p id="temp">${TempDisplay(main.temp)}</p>
-            </div>
-            <div class="day-row2">
-                <div class="desc">
-                    <div class="desc-wrapper" id="desc-1">
-                        <p id="desc">${weather.description}</p>
-                    </div>
-                    <div class="desc-wrapper" id="desc-2">
-                        <p id="feels">Feels like ${TempDisplay(main.feels_like)}</p>
-                    </div>
-                    <div class="desc-wrapper" id="desc-3">
-                        <p id="HL">H: ${TempDisplay(main.temp_max)}</p>
-                        <p id="HL">L: ${TempDisplay(main.temp_max)}</p>
-                    </div>
+        <div class="main">
+            <div class="day-display">
+                <div class="day-col1">
+                    <p id="city">${name}</p>
+                    <p id="desc">${weather.description}</p>
+                    <p id="feels">Feels like ${TempDisplay(main.feels_like)}</p>
                 </div>
-            </div>
+                <div class="day-col2">
+                        <div class="desc-wrapper">
+                            <p id="temp">${TempDisplay(main.temp)}</p>
+                        </div>
+                        <div class="desc-wrapper">
+                            <p id="HL">H: ${TempDisplay(main.temp_max)}</p>
+                            <p id="HL">L: ${TempDisplay(main.temp_max)}</p>
+                        </div>
+                </div>
             
+            </div>
+            <div class="suggestion">
+                <p> ${GiveSuggestion()}</p>
+            </div>
         </div>
         <div class="week-display">
 
@@ -65,6 +66,11 @@ function TempDisplay(temp){
         sign = `<span class="sign">°F</span>`;
     }
     return `${Math.round(temp)}${sign}`;
+}
+
+function GiveSuggestion(){
+
+    return `Good Times`;
 }
 
 
