@@ -27,6 +27,8 @@ function ParseAnswer(response){
     }
 }
 function BuildDisplay(weather, main, visibility, wind,clouds,name){
+    console.log(main);
+    console.log(weather);
     const display = 
     `
         <div class="day-display">
@@ -35,11 +37,17 @@ function BuildDisplay(weather, main, visibility, wind,clouds,name){
                 <p id="temp">${TempDisplay(main.temp)}</p>
             </div>
             <div class="day-row2">
-                <div class="feels">
-
-                </div>
-                <div class="humid">
-
+                <div class="desc">
+                    <div class="desc-wrapper" id="desc-1">
+                        <p id="desc">${weather.description}</p>
+                    </div>
+                    <div class="desc-wrapper" id="desc-2">
+                        <p id="feels">Feels like ${TempDisplay(main.feels_like)}</p>
+                    </div>
+                    <div class="desc-wrapper" id="desc-3">
+                        <p id="HL">H: ${TempDisplay(main.temp_max)}</p>
+                        <p id="HL">L: ${TempDisplay(main.temp_max)}</p>
+                    </div>
                 </div>
             </div>
             

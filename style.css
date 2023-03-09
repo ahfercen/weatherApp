@@ -68,22 +68,33 @@ body{
 .day-row1{
     font-size: 250%;
 }
-#city, #temp{
-    margin: 0px;
+#city, #temp, #desc, #feels, #HL{
+    margin: 4px;
     padding-right: 5%;
     padding-left: 5%;
 }
 #city{
     
 }
-#temp{
+#temp, #HL{
     color: rgb(212, 207, 207);
     border-left: 1px solid white;
     padding-left: 15%;
 
 }
 .day-row2{
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+.desc{
+    display: flex;
+}
+.desc-wrapper{
+    display:flex;
+    flex: 1;
+}
+#desc-3{
+    flex-direction: column;
 }
 .week-display{
     height: 80%;
