@@ -27,10 +27,26 @@ function ParseAnswer(response){
     }
 }
 function BuildDisplay(weather, main, visibility, wind,clouds,name){
-
     const display = 
     `
+        <div class="day-display">
+            <div class="day-row1">
+                <p id="city">${name}</p>
+                <p id="temp">${TempDisplay(main.temp)}</p>
+            </div>
+            <div class="day-row2">
+                <div class="feels">
 
+                </div>
+                <div class="humid">
+
+                </div>
+            </div>
+            
+        </div>
+        <div class="week-display">
+
+        </div>
     `;
     content.innerHTML = (display);
 }

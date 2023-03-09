@@ -1,8 +1,13 @@
+@font-face {
+    font-family: TiltWarp;
+    src: url(TiltWarp-Regular.ttf);
+}
 body{
     margin: 0px;
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    font-family: 'TiltWarp';
 }
 .window{
     display: flex;
@@ -36,14 +41,52 @@ body{
 .control input{
     background: #68686881;
     font-size: 200%;
-
 }
 .content{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
 }
+.day-display, .week-display{
+    width: 100%;
+    color: white;
+    display: flex;
+}
+.day-display{
+    height: 10%;
+    flex-direction: column;
+}
+.day-row1, .day-row2{
+    display: flex;
+    margin-left: 4%;
+    flex: 1;
+    width: 15%;
+    border-bottom: 1px solid white
+}
+.day-row1{
+    font-size: 250%;
+}
+#city, #temp{
+    margin: 0px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+#city{
+    
+}
+#temp{
+    color: rgb(212, 207, 207);
+    border-left: 1px solid white;
+    padding-left: 15%;
 
+}
+.day-row2{
+    border: 1px solid red;
+}
+.week-display{
+    height: 80%;
+}
 
 
