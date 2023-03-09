@@ -17,18 +17,26 @@ body{
 }
 .control{
     display: flex;
-    justify-content: end;
     width: 100%;
-    font-size: 200%;
 }
-.title{
-    font-size: 300%;
+.search, .toggle{
+    margin: 20px 30px;
+    display: flex;
+    flex: 1;
 }
-
+.toggle{
+    align-items: flex-end;
+    justify-content: flex-end;
+}
 .control input, .control button, .control{
     background: none;
     border: none;
     color: white;
+}
+.control input{
+    background: #68686881;
+    font-size: 200%;
+
 }
 .content{
     display: flex;
