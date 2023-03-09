@@ -16,8 +16,8 @@ async function GetWeather(location){
 inp.addEventListener("keypress",(event) => {
     if(event.key === "Enter"){
         GetWeather(inp.value);
+        event.preventDefault();
     }
-    event.preventDefault();
 });
 function ParseAnswer(response){
     if(response.cod === "404"){
@@ -27,8 +27,6 @@ function ParseAnswer(response){
     }
 }
 function BuildDisplay(weather, main, visibility, wind,clouds,name){
-    console.log(main);
-    console.log(weather);
     const display = 
     `
         <div class="day-display">
