@@ -21,9 +21,30 @@
 .search input{
     font-size: 150%;
 }
-.display{
+.content, .display{
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+.display{
     border: 1px solid red;
+    width: 50%;
+    margin-top: 1%;;
+}
+.main-info{
+    display: flex;
+    border: 1px solid blue;
+}
+.extra-info{
+    border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+}
+.extra-left{
+    border: 1px solid orange;
+}
+.extra-right{
+    border: 1px solid purple;
+
 }

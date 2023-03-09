@@ -31,7 +31,7 @@ function BuildDisplay(weather, main, visibility, wind,clouds,name){
     `<div class="display">
         <h1>${name}</h1>
         <div class="main-info">
-            <h3>${weather.description}</h3>
+            <p>${weather.description}</p>
             <p id="degree">${main.temp}</p>
         </div>
         <div class="extra-info">
