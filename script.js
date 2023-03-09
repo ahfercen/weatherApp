@@ -1,6 +1,9 @@
+//Metric 1 / Imperial 0
+let toggle = 1;
 const inp = document.querySelector("input");
 const btn = document.querySelector("button");
 const content = document.getElementById("content");
+
 
 async function GetWeather(location){
     if(location == "") location = "Toronto";
@@ -26,27 +29,21 @@ function ParseAnswer(response){
 function BuildDisplay(weather, main, visibility, wind,clouds,name){
 
     const display = 
-    `<div class="display">
-        <div class="top-info">
-            <h1>${name}</h1>
-            <div class="main-info">
-                <p>${weather.description}</p>
-                <div class="temp-info">
-                    <p id="degree">${Math.round(main.temp)}</p>
-                    <p>feels like ${Math.round(main.feels_like)}</p>
-                </div>
-            </div>
-        </div>
-        <div class="extra-info">
-                <p>H: ${Math.round(main.temp_min)}</p>
-                <p>L: ${Math.round(main.temp_max)}</p>
-        </div>
-    </div>
+    `
+    
     `;
     content.innerHTML = (display);
 }
 
-
+function TempDisplay(temp){
+    let sign;
+    if(toggle == 1){
+        sign = `<span class="sign">°C</span>`;
+    }else{
+        sign = `<span class="sign">°F</span>`;
+    }
+    return `${Math.round(temp)}${sign}`;
+}
 
 
 GetWeather(inp.value);
