@@ -2,6 +2,7 @@
 let toggle = 1;
 const inp = document.querySelector("input");
 const content = document.getElementById("content");
+const win = document.getElementById("window");
 
 async function GetWeather(location){
     if(location === "") location = "Toronto";
@@ -27,7 +28,6 @@ function ParseAnswer(response){
     }
 }
 function BuildDisplay(weather, main, visibility, wind,clouds,name){
-    console.log(weather);
     const display = 
     `
         <div class="main">
@@ -71,19 +71,28 @@ function TempDisplay(temp){
 
 function GiveSuggestion(temps){
     if(temps < -30){
+        ChangeBackground('cold-night.jpg');
         return `Extrteme cold`;
     }else if(temps < -15){
+        ChangeBackground('snow-night.jpg');
         return `Well below freezing`;
     }else if(temps < 0){
+        ChangeBackground('light-night.jpg');
         return `Freezing temperatures`;
     }else if(temps < 15){
+        ChangeBackground('clear-night.jpg');
         return `Pretty chilly out`;
     }else if(temps < 30){
+        ChangeBackground('warm-night.jpg');
         return `Comfortably hot`;
     }else if(temps < 60){
         return `Extreme heat`;
     }
     return `Strange weather we're having`;
+}
+
+function ChangeBackground(str){
+    win.style.backgroundImage = `url(${str})`;
 }
 
 

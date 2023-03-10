@@ -8,11 +8,12 @@ body{
     height: 100vh;
     overflow: hidden;
     font-family: 'TiltWarp';
+    user-select: none;
 }
 .window{
     display: flex;
     flex-direction: column;
-    background-image: url('bg.jpg');
+    background-image: url('clear-night.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
