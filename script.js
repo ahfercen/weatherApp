@@ -27,6 +27,7 @@ function ParseAnswer(response){
     }
 }
 function BuildDisplay(weather, main, visibility, wind,clouds,name){
+    console.log(weather);
     const display = 
     `
         <div class="main">
@@ -48,7 +49,7 @@ function BuildDisplay(weather, main, visibility, wind,clouds,name){
             
             </div>
             <div class="suggestion">
-                <p> ${GiveSuggestion()}</p>
+                <p> ${GiveSuggestion(main.temp)}</p>
             </div>
         </div>
         <div class="week-display">
@@ -68,9 +69,21 @@ function TempDisplay(temp){
     return `${Math.round(temp)}${sign}`;
 }
 
-function GiveSuggestion(){
-
-    return `Good Times`;
+function GiveSuggestion(temps){
+    if(temps < -30){
+        return `Extrteme cold`;
+    }else if(temps < -15){
+        return `Well below freezing`;
+    }else if(temps < 0){
+        return `Freezing temperatures`;
+    }else if(temps < 15){
+        return `Pretty chilly out`;
+    }else if(temps < 30){
+        return `Comfortably hot`;
+    }else if(temps < 60){
+        return `Extreme heat`;
+    }
+    return `Strange weather we're having`;
 }
 
 
